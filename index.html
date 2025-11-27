@@ -2,11 +2,107 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ROCK PAPER SCISSORS</title>
-    <script src = "script.js"></script>
+    <style>
+        #gameTable, #scoreTable{
+            border: 1px solid black;
+            margin-top: 20px;
+            width: 500px;
+            border-collapse: collapse;
+        }
+
+        th, td{
+            border: 1px solid black;
+            text-align: center;
+            padding: 5px;
+        }
+
+        #winnerText{
+            margin-top: 20px;
+            width: 500px;
+            height: 40px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        #gameDiv, #scoreBoard, #winnerDiv{
+            display:flex;
+            justify-content: center;
+        }
+
+        button{
+            margin: 5px;
+            padding: 10px 15px;
+        }
+    </style>
+    <script src = "script.js" defer></script>
 </head>
 <body>
-    
+    <h1>ROCK PAPER SCISSORS</h1>
+    <h2>CHOOSE AN OPTION:</h2>
+
+    <button id="rockButton">ROCK</button>
+    <button id="paperButton">PAPER</button>
+    <button id="scissorsButton">SCISSORS</button>
+
+    <div id="gameDiv">
+        <table id="gameTable">
+            <tr>
+                <th>ROUND</th>
+                <th>PLAYER</th>
+                <th>COMPUTER</th>
+                <th>RESULT</th>
+            </tr>
+            <tr>
+                <th>Round 1</th>
+                <td id="humanRound1"></td>
+                <td id="computerRound1"></td>
+                <td id="roundResult1"></td>
+            </tr>
+            <tr>
+                <th>Round 2</th>
+                <td id="humanRound2"></td>
+                <td id="computerRound2"></td>
+                <td id="roundResult2"></td>
+            </tr>
+            <tr>
+                <th>Round 3</th>
+                <td id="humanRound3"></td>
+                <td id="computerRound3"></td>
+                <td id="roundResult3"></td>
+            </tr>
+            <tr>
+                <th>Round 4</th>
+                <td id="humanRound4"></td>
+                <td id="computerRound4"></td>
+                <td id="roundResult4"></td>
+            </tr>
+            <tr>
+                <th>Round 5</th>
+                <td id="humanRound5"></td>
+                <td id="computerRound5"></td>
+                <td id="roundResult5"></td>
+            </tr>
+        </table>
+    </div>
+
+    <div id="scoreBoard">
+        <table id="scoreTable">
+            <tr>
+                <th>Player Score:</th>
+                <th>Computer Score:</th>
+            </tr>
+            <tr>
+                <td id="humanScoreboard">0</td>
+                <td id="computerScoreboard">0</td>
+            </tr>
+        </table>
+    </div>
+
+    <div id="winnerDiv">
+        <input type="text" placeholder="WINNER" id="winnerText" readonly>
+    </div>
 </body>
 </html>
